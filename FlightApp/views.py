@@ -14,8 +14,8 @@ class FlightViewSet(viewsets.ModelViewSet):
     queryset = Flight.objects.all()
     serializer_class = FlightSerializer
 
-    # filter_backends = filters.SearchFilter
-    # search_fields = ['departure_city', 'arrival_city', 'date0f_departure']
+    filter_backends = filters.SearchFilter
+    search_fields = ['departure_city', 'arrival_city', 'date0f_departure']
 
     permission_classes = [IsAuthenticated, DjangoModelPermissions]
     # authentication_classes = {TokenAuthentication}
